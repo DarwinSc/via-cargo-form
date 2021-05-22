@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Via Cargo - Cotizador de envíos on line</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="images/logo-via-cargo.png" width="190" height="31" alt=""/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Volver al inicio <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+
+<div class="jumbotron jumbotron-fluid text-center col-lg-12">
+    <div class="col-md-12 offset-lg-2 col-lg-7 offset-xl-3">
+        <h1 class="display-4">Mi retiro<br>
+            en domicilio<br>
+            Online</h1>
+    </div>
+
+
+    <div class="col-md-6 offset-lg-2 col-lg-4 offset-xl-3">
+        <p class="lead">Cotizador de retiros a domicilio.
+            <br>
+            La vía más rápida y segura para hacer tus envíos.</p></div>
+
+
+</div>
+<div class="container">
+
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="accordion1" role="tablist">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne1" role="button"
+                                            aria-expanded="true" aria-controls="collapseOne1"> 1- Comenzá a
+                            gestionar </a></h5>
+                    </div>
+                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+
+
+                            <form action="#" class="row">
+                                <div class="container">
+                                    <div class="text-left"><h3>Completá los datos de tu envío</h3>
+                                        <p>Los campos marcados con * son obligatorios</p></div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-lg-12">
+                                    <br>
+
+                                    <p class="formulario">Código postal de origen*</p>
+                                    <input type="text" placeholder="Ej.: 1000, 1002, 1085" class="form-control"><br>
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-12">
+                                    <p class="formulario">Código postal de destino*</p>
+
+                                    <input type="text" placeholder="Ej.: 1000, 1002, 1085" class="form-control"><br>
+
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-12">
+                                    <h4>Descripción del envío</h4>
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-4">
+                                    <p class="formulario">Cantidad de bultos*</p>
+                                    <input type="number" placeholder="Ej.: 1; 2; 3" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-4">
+                                    <p class="formulario">Peso en kg*</p>
+                                    <input type="Text" placeholder="Ej.: 1; 1.5; 2" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-4">
+                                    <p class="formulario">Altura en cm*</p>
+                                    <input type="number" placeholder="Ej.: 5; 10; 20" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-4">
+                                    <p class="formulario">Anchura en cm*</p>
+                                    <input type="number" placeholder="Ej.: 5; 10; 20" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-4">
+                                    <p class="formulario">Profundidad en cm*</p>
+                                    <input type="number" placeholder="Ej.: 5; 10; 20" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-4">
+                                    <p class="formulario">Valor declarado*</p>
+                                    <input type="number" placeholder="Valor en AR$" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-12">
+                                    <h4>Seleccione forma de despacho*</h4>
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-2">
+
+                                    <input name="envio" type="radio" id="origen"> Pago en origen
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-2">
+
+                                    <input name="envio" type="radio" id="destino"> Pago en destino
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-8">
+
+
+                                </div>
+                                <br>
+                                <br>
+
+                                <div class="form-group form-group col-md-3 col-lg-12"><br>
+
+                                    <input name="enviar" type="submit" id="enviar" title="Enviar" value="Siguiente"
+                                           class="btn btn-primary btn-md">
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo1">
+                        <h5 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseTwo1" role="button"
+                                            aria-expanded="false" aria-controls="collapseTwo1">2- Tipo de servicio </a>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1"
+                         data-parent="#accordion1">
+                        <div class="card-body"><br>
+                            <h3>Seleccione el tipo de operación</h3><br>
+                            <br>
+                            <div class="row">
+                                <div class="card text-center col-lg-5 col-md-4">
+                                    <div class="card-titulo"> Básica</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Retiro/Entrega a domicilio</h5>
+                                        <img src="images/basica.png" class="img-fluid" alt="Placeholder image"><br>
+                                        <br>
+
+                                        <p class="card-text">Servicio de entrega básica para envíos de hasta xxx kg. Con
+                                            entrega en domicilio del destinatario*.</p>
+                                        <hr class="my-4">
+                                        <h3>$1.999,99</h3>
+
+                                        <input name="Seleccionar" type="button" class="btn btn-primary" id="Seleccionar"
+                                               value="Seleccionar"></div>
+
+                                </div>
+                                <div class="col-lg-1 col-md-4">
+
+
+                                </div>
+                                <div class="card text-center col-lg-5 col-md-4">
+                                    <div class="card-titulo"> Estándar</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Retiro en domicilio /
+                                            Entrega en agencia</h5>
+                                        <img src="images/estandar.png" class="img-fluid" alt="Placeholder image"><br>
+                                        <br>
+
+                                        <p class="card-text">Servicio de entrega estándar para envíos de hasta xxx kg. A
+                                            retirar en sucursal seleccionada*</p>
+
+                                        <hr class="my-4">
+                                        <h3>$1.999,99</h3>
+
+                                        <a href="#" class="btn btn-secondary">Seleccionar</a></div>
+
+                                </div>
+                                <br><br><br>
+
+                            </div>
+                            <br>
+                            <br>
+                            <class row>
+
+                                <p>*Los valores de cotización son únicamente informativos y están sujetos a variaciones
+                                    según cargo por manejo, peso y/o medida reales registradas en el momento de la
+                                    venta. El valor del servicio contraentrega tiene un costo adicional que no está
+                                    contemplado en esta cotización. El valor del envío puede variar en el momento de la
+                                    entrega en el punto de venta.</p>
+
+                                <p>**La prima de reembolso a pagar, es del 2,5% del valor declarado. En todos los casos
+                                    el acondicionamiento del embalaje de las piezas es responsabilidad del
+                                    remitente.</p>
+
+                                <p>*** Toda operación tiene un costo mínimo y fijo de $300, en concepto de flete por el
+                                    retiro a domicilio de encomienda.
+                                </p>
+                                <div class="form-group row form-group col-md-3 col-lg-2"><br>
+
+                                    <input name="enviar2" type="submit" id="enviar2" title="Enviar2" value="Siguiente"
+                                           class="btn btn-primary btn-md">
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-2">
+                                    Volver atrás
+                                </div>
+                            </class>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingThree1">
+                        <h5 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseThree1"
+                                            role="button" aria-expanded="false" aria-controls="collapseThree1">3- Datos
+                            del remitente </a></h5>
+                    </div>
+                    <div id="collapseThree1" class="collapse" role="tabpanel" aria-labelledby="headingThree1"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <form action="#" class="row">
+                                <div class="container">
+                                    <div class="text-left"><h3>Completá los datos del remitente</h3>
+                                        <p>Los campos marcados con * son obligatorios</p></div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-lg-12">
+                                    <br>
+
+                                    <p class="formulario">Nombre completo del remitente*</p>
+                                    <input type="text" placeholder="Nombre completo" class="form-control"><br>
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-5">
+                                    <p class="formulario">Dirección*</p>
+
+                                    <input type="text" placeholder="Calle" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-2">
+                                    <p class="formulario">Número*</p>
+
+                                    <input type="text" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-2">
+                                    <p class="formulario">Piso/Depto</p>
+
+                                    <input type="text" class="form-control"><br>
+
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-3">
+                                    <p class="formulario">Datos adicionales</p>
+
+                                    <input type="text" class="form-control" size="50" maxlength="20"><br>
+
+                                </div>
+                                <div class="form-group col-md-3 col-lg-4">
+                                    <br>
+
+                                    <p class="formulario">DNI/CUIL/CUIT del remitente*</p>
+                                    <input type="text" class="form-control"><br>
+                                </div>
+                                <div class="form-group col-md-3 col-lg-4">
+                                    <br>
+
+                                    <p class="formulario">Teléfono del remitente*</p>
+                                    <input type="text" class="form-control"><br>
+                                </div>
+                                <div class="form-group col-md-3 col-lg-4">
+                                    <br>
+
+                                    <p class="formulario">Email del remitente*</p>
+                                    <input type="email" class="form-control"><br>
+                                </div>
+
+
+                                <br>
+                                <br>
+
+                                <div class="form-group form-group col-md-3 col-lg-12">
+
+                                    <input name="enviar3" type="submit" id="enviar3" title="Enviar" value="Siguiente"
+                                           class="btn btn-primary btn-md">
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-12">
+
+                                    Volver atrás
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingFour1">
+                        <h5 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseFour1" role="button"
+                                            aria-expanded="false" aria-controls="collapseFour1">4- Datos del
+                            destinatario </a></h5>
+                    </div>
+                    <div id="collapseFour1" class="collapse" role="tabpanel" aria-labelledby="headingFour1"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <form action="#" class="row">
+                                <div class="container">
+                                    <div class="text-left"><h3>Completá los datos del destinatario</h3>
+                                        <p>Los campos marcados con * son obligatorios</p></div>
+                                </div>
+
+                                <div class="form-group col-md-3 col-lg-12">
+                                    <br>
+
+                                    <p class="formulario">Nombre completo del destinatario*</p>
+                                    <input type="text" placeholder="Nombre completo" class="form-control"><br>
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-5">
+                                    <p class="formulario">Dirección*</p>
+
+                                    <input type="text" placeholder="Calle" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-2">
+                                    <p class="formulario">Número*</p>
+
+                                    <input type="text" class="form-control"><br>
+
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-2">
+                                    <p class="formulario">Piso/Depto</p>
+
+                                    <input type="text" class="form-control"><br>
+
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-3">
+                                    <p class="formulario">Datos adicionales</p>
+
+                                    <input type="text" class="form-control" size="50" maxlength="20"><br>
+
+                                </div>
+                                <div class="form-group col-md-3 col-lg-4">
+                                    <br>
+
+                                    <p class="formulario">DNI/CUIL/CUIT del destinatario*</p>
+                                    <input type="text" class="form-control"><br>
+                                </div>
+                                <div class="form-group col-md-3 col-lg-4">
+                                    <br>
+
+                                    <p class="formulario">Teléfono del destinatario*</p>
+                                    <input type="text" class="form-control"><br>
+                                </div>
+                                <div class="form-group col-md-3 col-lg-4">
+                                    <br>
+
+                                    <p class="formulario">Email del remitente*</p>
+                                    <input type="email" class="form-control"><br>
+                                </div>
+
+
+                                <br>
+                                <br>
+
+                                <div class="form-group form-group col-md-3 col-lg-12">
+
+                                    <input name="enviar4" type="submit" id="enviar4" title="Enviar" value="Siguiente"
+                                           class="btn btn-primary btn-md">
+                                </div>
+                                <div class="form-group form-group col-md-3 col-lg-12">
+
+                                    Volver atrás
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingFive1">
+                        <h5 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseFive1" role="button"
+                                            aria-expanded="false" aria-controls="collapseFive1">5- Pago </a></h5>
+                    </div>
+                    <div id="collapseFive1" class="collapse" role="tabpanel" aria-labelledby="headingFive1"
+                         data-parent="#accordion1">
+                        <div class="card-body">
+                            <form action="#" class="row">
+                                <div class="container">
+                                    <div class="text-left"><h3>Detalle de la operación</h3>
+                                        <p>Por favor, revise cuidadosamente los datos ingresados</p></div>
+                                </div>
+
+                                <div class="col-md-3 col-lg-5">
+                                    <img src="images/box.png" alt="Via Cargo Mi retiro en domicilio Online" width="100"
+                                         class="img-fluid"></div>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="col-md-3 col-lg-12">
+                                    <div class="text-left"><p><strong>Descripción del envío</strong></p>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-lg-12">
+                                    <div class="text-left"><h5>Retiro/Entrega a domicilio</h5>
+                                        <p>xxx cm x xxx cm x xxx cm</p>
+                                        <p>Entrega estándar</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-12">
+                                    <hr class="my-4">
+                                    <div class="text-left"><p><strong>Destinatario</strong></p>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-12">
+                                    <div class="text-left"><h5>Nombre y apellido del destinatario</h5>
+                                        <p>Dirección 1234, Piso: 1 Depto: D</p>
+                                        <p>Argentina, C.A.B.A. / CP1024</p>
+                                        <p>DNI: 12.345.678 / email@gmail.com / Cel. 011-1234-5678</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-12">
+                                    <hr class="my-4">
+                                    <div class="text-left"><p><strong>Remitente</strong></p>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-12">
+                                    <div class="text-left"><h5>Nombre y apellido del remitente</h5>
+                                        <p>Dirección 1234, Piso: 1 Depto: D</p>
+                                        <p>Argentina, C.A.B.A. / CP1024</p>
+                                        <p>DNI: 12.345.678 / email@gmail.com / Cel. 011-1234-5678</p>
+                                    </div>
+                                    <hr class="my-4">
+                                </div>
+                                <div class="col-md-3 col-lg-12">
+                                    <div class="text-left"><h5>Total</h5>
+                                        <h3>$1.999,99*</h3>
+
+                                        <p>*Este cargo es el costo del retiro. El valor del envío se abonará con el
+                                            retiro o en destino.</p>
+                                    </div>
+
+                                </div>
+
+                                <form action="#" class="row">
+
+
+                                    <div class="form-group form-group col-md-3 col-lg-5"><br>
+
+                                        <p class="formulario">Cupón de descuento</p>
+                                        <input type="text" placeholder="¿Tiene un cupón de descuento?"
+                                               class="form-control"><br>
+
+                                    </div>
+                                </form>
+
+                                <div class="form-group form-group col-md-3 col-lg-12">
+
+                                    <input name="acepto" type="radio" id="acepto"> El contenido del envío que realizo
+                                    está bajo mi responsabilidad.*<br>
+                                    <br>
+
+
+                                </div>
+
+                                <div class="form-group form-group col-md-3 col-lg-12">
+
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#ventanamodal">
+                                        Pagar
+                                    </button>
+
+                                </div>
+
+
+                                <div class="modal fade" id="ventanamodal" tabindex="-1" role="dialog"
+                                     aria-labelledby="tituloventana" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <img src="images/logo-via-cargo-verde.png" alt="Placeholder image"
+                                                     width="150" class="img-fluid">
+                                                <hr>
+                                                <h5 class="card-title" id="tituloventana"><strong>Orden
+                                                    confirmada</strong></h5>
+                                                <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="alert alert-success">
+
+                                                    <p class="card-text">Su solicitud se envió correctamente.
+                                                        Gracias.</p>
+                                                    <img src="images/orden-confirmada.png" alt="Placeholder image"
+                                                         width="200" class="img-fluid"><br><br>
+
+                                                    <p class="card-text">Estimado <strong>Nombre Cliente</strong>,</p>
+                                                    <p class="card-text">Hemos procesado su solicitud. En breve recibirá
+                                                        un mail con los detalles de la operación y número de
+                                                        seguimiento.</p>
+                                                    <p class="card-text">Gracias por confiar en <strong>Via
+                                                        Cargo.</strong></p>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" type="button" data-dismiss="modal"> Ver
+                                                    resumen en pdf
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br/>
+    <br/>
+
+    <br>
+
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm6 col-lg-3">
+                <strong>Accesos Rápidos</strong>
+                <li><a href="https://www.viacargo.com.ar/tracking">Rastrear envío / Tracking</a></li>
+                <li><a href="https://www.viacargo.com.ar/agencies">Agencias</a></li>
+                <li><a href="https://www.viacargo.com.ar/quote">Cotizar Envíos</a></li>
+            </div>
+
+            <div class="col-sm6 col-lg-3">
+                <strong>Productos</strong>
+                <li><a href="https://www.viacargo.com.ar/products">VC Personal</a></li>
+                <li><a href="https://www.viacargo.com.ar/products">VC Standard</a></li>
+                <li><a href="https://www.viacargo.com.ar/products">VC Plus</a></li>
+                <li><a href="https://www.viacargo.com.ar/products">Vía Automática</a></li>
+            </div>
+            <div class="col-sm6 col-lg-3">
+                <strong>Soporte</strong>
+                <li><a href="https://www.viacargo.com.ar/customer-support.">Atención al cliente</a></li>
+                <li><a href="https://www.viacargo.com.ar/customer-support">Reclamos</a></li>
+                <br>
+
+                <strong>Cómo</strong>
+                <li><a href="https://www.viacargo.com.ar/tips">Peso y tamaño</a></li>
+                <li><a href="https://www.viacargo.com.ar/tips">Tips / Cómo empacar</a></li>
+
+            </div>
+            <div class="col-sm6 col-lg-3">
+                <strong>Acerca de Vía Cargo</strong>
+                <li><a href="https://www.viacargo.com.ar/know-us">Conocenos</a></li>
+                <li><a href="https://www.viacargo.com.ar/contact?join">Sumate a la red</a></li>
+                <li><a href="https://www.viacargo.com.ar/join-us">RR.HH.</a></li>
+                <li><a href="https://www.viacargo.com.ar/contact">Acercanos tu CV</a></li>
+            </div>
+            <br>
+            <br><br>
+
+
+            <div class="col-sm col-lg-3"><br>
+
+                <a href="https://api.whatsapp.com/send?phone=5491132727722&text=Hola">Whatsapp: 11-3272-7722</a></div>
+            <div class="col-sm3 col-lg-3"><br>
+
+                0810-222-7722
+
+            </div>
+            <div class="col-sm col-lg-6"><br>
+
+
+            </div>
+
+            <div class="col-sm6 col-lg-3"><br>
+
+                <a href="https://www.viacargo.com.ar/terms">Términos y condiciones de Servicio </a></div>
+
+            <div class="col-sm6 col-lg-3"><br>
+
+                <a href="https://www.viacargo.com.ar/terms">Términos de uso de sitio web</a></div>
+
+            <div class="col-sm6 col-lg-3"><br>
+
+                <a href="https://www.viacargo.com.ar/terms">Política de privacidad </a></div>
+            <div class="col-sm6 col-lg-12"><br>
+
+                <p>Este sitio está protegido por las leyes internacionales y de Argentina de derechos de autor y marca
+                    registrada. ©Vía Cargo 2018. Todos los derechos reservados.
+
+                    Los derechos de propiedad intelectual y de otro tipo relativos a la información contenida en este
+                    sitio pertenecen a Vía Cargo.</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>
