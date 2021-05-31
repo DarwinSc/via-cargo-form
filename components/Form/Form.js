@@ -1,4 +1,6 @@
 import BeginManagerForm from "./components/BeginManagerForm";
+import TypeServiceForm from "./components/TypeServiceForm";
+import SenderDataForm from "./components/SenderDataForm";
 
 const Form = props => {
   return (
@@ -27,192 +29,61 @@ const Form = props => {
           data-parent="#accordion1"
         >
           <div className="card-body">
-            <BeginManagerForm />
+            <BeginManagerForm/>
           </div>
         </div>
       </div>
 
       <div className="card">
         <div className="card-header" role="tab" id="headingTwo1">
-          <h5 className="mb-0"><a className="collapsed" data-toggle="collapse" href="#collapseTwo1"
-                                  role="button"
-                                  aria-expanded="false" aria-controls="collapseTwo1">2- Tipo de
-            servicio </a>
+          <h5 className="mb-0">
+            <a
+              className="collapsed"
+              data-toggle="collapse"
+              href="#collapseTwo1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseTwo1"
+            >2- Tipo de
+              servicio </a>
           </h5>
         </div>
-        <div id="collapseTwo1" className="collapse" role="tabpanel" aria-labelledby="headingTwo1"
-             data-parent="#accordion1">
-          <div className="card-body"><br/>
-            <h3>Seleccione el tipo de operación</h3><br/>
-            <br/>
-            <div className="row">
-              <div className="card text-center col-lg-5 col-md-4">
-                <div className="card-titulo"> Básica</div>
-                <div className="card-body">
-                  <h5 className="card-title">Retiro/Entrega a domicilio</h5>
-                  <img src="/images/basica.png" className="img-fluid" alt="Placeholder image"/>
-                  <br/>
-                  <br/>
 
-                  <p className="card-text">Servicio de entrega básica para envíos de hasta xxx kg.
-                    Con
-                    entrega en domicilio del destinatario*.</p>
-                  <hr className="my-4"/>
-                  <h3>$1.999,99</h3>
-
-                  <input name="Seleccionar" type="button" className="btn btn-primary" id="Seleccionar"
-                         value="Seleccionar"/>
-                </div>
-
-              </div>
-              <div className="col-lg-1 col-md-4">
-
-
-              </div>
-              <div className="card text-center col-lg-5 col-md-4">
-                <div className="card-titulo"> Estándar</div>
-                <div className="card-body">
-                  <h5 className="card-title">Retiro en domicilio /
-                    Entrega en agencia</h5>
-                  <img src="/images/estandar.png" className="img-fluid" alt="Placeholder image"/>
-                  <br/>
-                  <br/>
-
-                  <p className="card-text">Servicio de entrega estándar para envíos de hasta xxx kg.
-                    A
-                    retirar en sucursal seleccionada*</p>
-
-                  <hr className="my-4"/>
-                  <h3>$1.999,99</h3>
-
-                  <a href="#" className="btn btn-secondary">Seleccionar</a>
-                </div>
-
-              </div>
-              <br/><br/><br/>
-
-            </div>
-            <br/>
-            <br/>
-            <class row>
-
-              <p>*Los valores de cotización son únicamente informativos y están sujetos a
-                variaciones
-                según cargo por manejo, peso y/o medida reales registradas en el momento de la
-                venta. El valor del servicio contraentrega tiene un costo adicional que no está
-                contemplado en esta cotización. El valor del envío puede variar en el momento de la
-                entrega en el punto de venta.</p>
-
-              <p>**La prima de reembolso a pagar, es del 2,5% del valor declarado. En todos los
-                casos
-                el acondicionamiento del embalaje de las piezas es responsabilidad del
-                remitente.</p>
-
-              <p>*** Toda operación tiene un costo mínimo y fijo de $300, en concepto de flete por
-                el
-                retiro a domicilio de encomienda.
-              </p>
-              <div className="form-group row form-group col-md-3 col-lg-2"><br/>
-
-                <input name="enviar2" type="submit" id="enviar2" title="Enviar2" value="Siguiente"
-                       className="btn btn-primary btn-md"/>
-              </div>
-
-              <div className="form-group form-group col-md-3 col-lg-2">
-                Volver atrás
-              </div>
-            </class>
-
-          </div>
+        <div
+          id="collapseTwo1"
+          className="collapse"
+          role="tabpanel"
+          aria-labelledby="headingTwo1"
+          data-parent="#accordion1"
+        >
+          <TypeServiceForm previousNameAction="collapseOne1"/>
         </div>
       </div>
 
       <div className="card">
         <div className="card-header" role="tab" id="headingThree1">
-          <h5 className="mb-0"><a className="collapsed" data-toggle="collapse" href="#collapseThree1"
-                                  role="button" aria-expanded="false" aria-controls="collapseThree1">3-
-            Datos
-            del remitente </a></h5>
+          <h5 className="mb-0">
+            <a
+              className="collapsed"
+              data-toggle="collapse"
+              href="#collapseThree1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseThree1"
+            >
+              3- Datos del remitente
+            </a>
+          </h5>
         </div>
-        <div id="collapseThree1" className="collapse" role="tabpanel" aria-labelledby="headingThree1"
-             data-parent="#accordion1">
-          <div className="card-body">
-            <form action="#" className="row">
-              <div className="container">
-                <div className="text-left"><h3>Completá los datos del remitente</h3>
-                  <p>Los campos marcados con * son obligatorios</p></div>
-              </div>
 
-              <div className="form-group col-md-3 col-lg-12">
-                <br/>
-
-                <p className="formulario">Nombre completo del remitente*</p>
-                <input type="text" placeholder="Nombre completo" className="form-control"/><br/>
-              </div>
-
-              <div className="form-group form-group col-md-3 col-lg-5">
-                <p className="formulario">Dirección*</p>
-
-                <input type="text" placeholder="Calle" className="form-control"/><br/>
-
-              </div>
-              <div className="form-group form-group col-md-3 col-lg-2">
-                <p className="formulario">Número*</p>
-
-                <input type="text" className="form-control"/><br/>
-
-              </div>
-              <div className="form-group form-group col-md-3 col-lg-2">
-                <p className="formulario">Piso/Depto</p>
-
-                <input type="text" className="form-control"/><br/>
-
-              </div>
-
-              <div className="form-group form-group col-md-3 col-lg-3">
-                <p className="formulario">Datos adicionales</p>
-
-                <input type="text" className="form-control" size="50" maxLength="20"/>
-                <br/>
-
-              </div>
-              <div className="form-group col-md-3 col-lg-4">
-                <br/>
-
-                <p className="formulario">DNI/CUIL/CUIT del remitente*</p>
-                <input type="text" className="form-control"/><br/>
-              </div>
-              <div className="form-group col-md-3 col-lg-4">
-                <br/>
-
-                <p className="formulario">Teléfono del remitente*</p>
-                <input type="text" className="form-control"/><br/>
-              </div>
-              <div className="form-group col-md-3 col-lg-4">
-                <br/>
-
-                <p className="formulario">Email del remitente*</p>
-                <input type="email" className="form-control"/><br/>
-              </div>
-
-
-              <br/>
-              <br/>
-
-              <div className="form-group form-group col-md-3 col-lg-12">
-
-                <input name="enviar3" type="submit" id="enviar3" title="Enviar" value="Siguiente"
-                       className="btn btn-primary btn-md"/>
-              </div>
-              <div className="form-group form-group col-md-3 col-lg-12">
-
-                Volver atrás
-              </div>
-
-
-            </form>
-
-          </div>
+        <div
+          id="collapseThree1"
+          className="collapse"
+          role="tabpanel"
+          aria-labelledby="headingThree1"
+          data-parent="#accordion1"
+        >
+          <SenderDataForm previousNameAction="collapseTwo1"/>
         </div>
       </div>
 
@@ -226,7 +97,7 @@ const Form = props => {
         <div id="collapseFour1" className="collapse" role="tabpanel" aria-labelledby="headingFour1"
              data-parent="#accordion1">
           <div className="card-body">
-            <form action="#" className="row">
+            <div className="row">
               <div className="container">
                 <div className="text-left"><h3>Completá los datos del destinatario</h3>
                   <p>Los campos marcados con * son obligatorios</p></div>
@@ -239,26 +110,35 @@ const Form = props => {
                 <input type="text" placeholder="Nombre completo" className="form-control"/><br/>
               </div>
 
-              <div className="form-group form-group col-md-3 col-lg-5">
+              <div className="form-group form-group col-md-2 col-lg-4">
                 <p className="formulario">Dirección*</p>
 
                 <input type="text" placeholder="Calle" className="form-control"/><br/>
 
               </div>
-              <div className="form-group form-group col-md-3 col-lg-2">
+
+              <div className="form-group form-group col-md-2 col-lg-2">
                 <p className="formulario">Número*</p>
 
                 <input type="text" className="form-control"/><br/>
 
               </div>
-              <div className="form-group form-group col-md-3 col-lg-2">
+
+              <div className="form-group form-group col-md-2 col-lg-2">
+                <p className="formulario">Codigo Postal*</p>
+
+                <input type="text" className="form-control"/><br/>
+
+              </div>
+
+              <div className="form-group form-group col-md-2 col-lg-2">
                 <p className="formulario">Piso/Depto</p>
 
                 <input type="text" className="form-control"/><br/>
 
               </div>
 
-              <div className="form-group form-group col-md-3 col-lg-3">
+              <div className="form-group form-group col-md-2 col-lg-2">
                 <p className="formulario">Datos adicionales</p>
 
                 <input type="text" className="form-control" size="50" maxLength="20"/>
@@ -290,7 +170,7 @@ const Form = props => {
 
               <div className="form-group form-group col-md-3 col-lg-12">
 
-                <input name="enviar4" type="submit" id="enviar4" title="Enviar" value="Siguiente"
+                <input name="enviar4" type="submit" id="enviar4" title="Enviar" defaultValue="Siguiente"
                        className="btn btn-primary btn-md"/>
               </div>
               <div className="form-group form-group col-md-3 col-lg-12">
@@ -299,7 +179,7 @@ const Form = props => {
               </div>
 
 
-            </form>
+            </div>
 
           </div>
         </div>
@@ -314,7 +194,7 @@ const Form = props => {
         <div id="collapseFive1" className="collapse" role="tabpanel" aria-labelledby="headingFive1"
              data-parent="#accordion1">
           <div className="card-body">
-            <form action="#" className="row">
+            <div className="row">
               <div className="container">
                 <div className="text-left"><h3>Detalle de la operación</h3>
                   <p>Por favor, revise cuidadosamente los datos ingresados</p></div>
@@ -377,7 +257,7 @@ const Form = props => {
 
               </div>
 
-              <form action="#" className="row">
+              <div className="row">
 
 
                 <div className="form-group form-group col-md-3 col-lg-5"><br/>
@@ -387,7 +267,7 @@ const Form = props => {
                          className="form-control"/><br/>
 
                 </div>
-              </form>
+              </div>
 
               <div className="form-group form-group col-md-3 col-lg-12">
 
@@ -454,7 +334,7 @@ const Form = props => {
               </div>
 
 
-            </form>
+            </div>
 
           </div>
         </div>

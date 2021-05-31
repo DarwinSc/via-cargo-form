@@ -15,9 +15,12 @@ const BeginManagerForm = props => {
           type="text"
           placeholder="Ej.: 1000, 1002, 1085"
           className="form-control"
-          onKeyPress={props.originPostalCodeHandler}
-          value={props.originPostalCode}
+          onChange={props.originPostalCodeHandler}
+          defaultValue={props.originPostalCode}
         />
+        {props.errors.originPostalCode && (
+          <label className="text-danger">{props.errors.originPostalCode}</label>
+        )}
         <br/>
       </div>
 
@@ -28,9 +31,12 @@ const BeginManagerForm = props => {
           type="text"
           placeholder="Ej.: 1000, 1002, 1085"
           className="form-control"
-          onKeyPress={props.receptorPostalCodeHandler}
-          value={props.receptorPostalCode}
+          onChange={props.receptorPostalCodeHandler}
+          defaultValue={props.receptorPostalCode}
         />
+        {props.errors.receptorPostalCode && (
+          <label className="text-danger">{props.errors.receptorPostalCode}</label>
+        )}
         <br/>
       </div>
 
@@ -43,21 +49,27 @@ const BeginManagerForm = props => {
           type="number"
           placeholder="Ej.: 1; 2; 3"
           className="form-control"
-          onKeyPress={props.numberPackagesHandler}
-          value={props.numberPackages}
+          onChange={props.numberPackagesHandler}
+          defaultValue={props.numberPackages}
         />
+        {props.errors.numberPackages && (
+          <label className="text-danger">{props.errors.numberPackages}</label>
+        )}
         <br/>
 
       </div>
       <div className="form-group form-group col-md-3 col-lg-4">
         <p className="formulario">Peso en kg*</p>
         <input
-          type="Text"
+          type="number"
           placeholder="Ej.: 1; 1.5; 2"
           className="form-control"
-          onKeyPress={props.weightInKgHandler}
-          value={props.weightInKg}
+          onChange={props.weightInKgHandler}
+          defaultValue={props.weightInKg}
         />
+        {props.errors.weightInKg && (
+          <label className="text-danger">{props.errors.weightInKg}</label>
+        )}
         <br/>
 
       </div>
@@ -67,9 +79,12 @@ const BeginManagerForm = props => {
           type="number"
           placeholder="Ej.: 5; 10; 20"
           className="form-control"
-          onKeyPress={props.heightInCmHandler}
-          value={props.heightInCm}
+          onChange={props.heightInCmHandler}
+          defaultValue={props.heightInCm}
         />
+        {props.errors.heightInCm && (
+          <label className="text-danger">{props.errors.heightInCm}</label>
+        )}
         <br/>
 
       </div>
@@ -79,9 +94,12 @@ const BeginManagerForm = props => {
           type="number"
           placeholder="Ej.: 5; 10; 20"
           className="form-control"
-          onKeyPress={props.widthInCmHandler}
-          value={props.widthInCm}
+          onChange={props.widthInCmHandler}
+          defaultValue={props.widthInCm}
         />
+        {props.errors.widthInCm && (
+          <label className="text-danger">{props.errors.widthInCm}</label>
+        )}
         <br/>
 
       </div>
@@ -92,9 +110,12 @@ const BeginManagerForm = props => {
           type="number"
           placeholder="Ej.: 5; 10; 20"
           className="form-control"
-          onKeyPress={props.depthInCmHandler}
-          value={props.depthInCm}
+          onChange={props.depthInCmHandler}
+          defaultValue={props.depthInCm}
         />
+        {props.errors.depthInCm && (
+          <label className="text-danger">{props.errors.depthInCm}</label>
+        )}
         <br/>
 
       </div>
@@ -105,9 +126,12 @@ const BeginManagerForm = props => {
           type="number"
           placeholder="Valor en AR$"
           className="form-control"
-          onKeyPress={props.declaredValueHandler}
-          value={props.declaredValue}
+          onChange={props.declaredValueHandler}
+          defaultValue={props.declaredValue}
         />
+        {props.errors.declaredValue && (
+          <label className="text-danger">{props.errors.declaredValue}</label>
+        )}
         <br/>
 
       </div>
@@ -120,7 +144,7 @@ const BeginManagerForm = props => {
           name="envio"
           type="radio"
           id="origen"
-          value="Pago en origen"
+          defaultValue="Pago en origen"
           defaultChecked={props.dispatchForm === "Pago en origen"}
           onClick={props.dispatchFormHandler}
         /> Pago en origen
@@ -132,29 +156,32 @@ const BeginManagerForm = props => {
           name="envio"
           type="radio"
           id="destino"
-          value="Pago en destino"
+          defaultValue="Pago en destino"
           defaultChecked={props.dispatchForm === "Pago en destino"}
           onClick={props.dispatchFormHandler}
         /> Pago en destino
 
       </div>
       <div className="form-group form-group col-md-3 col-lg-8">
-
-
+        {props.errors.dispatchFormHandler && (
+          <label className="text-danger">{props.errors.dispatchFormHandler}</label>
+        )}
       </div>
       <br/>
       <br/>
 
       <div className="form-group form-group col-md-3 col-lg-12"><br/>
 
-        <input
-          name="enviar"
-          type="submit"
-          id="enviar"
-          title="Enviar"
-          value="Siguiente"
-          className="btn btn-primary btn-md"
-        />
+
+        <a
+          id="beginManagerSubmitButton"
+          className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
+          href="#collapseTwo1"
+          data-toggle="collapse"
+          onClick={props.nextStepHandler}
+        >
+          Siguiente
+        </a>
       </div>
 
 

@@ -1,34 +1,103 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
+import * as R from "ramda"
 
 import Component from "./BeginManagerForm";
 
+const defaultFormData = {
+  originPostalCode: '',
+  receptorPostalCode: '',
+  numberPackages: 0,
+  weightInKg: 0,
+  heightInCm: 0,
+  widthInCm: 0,
+  depthInCm: 0,
+  declaredValue: 0,
+  dispatchForm: null,
+};
+
 const Container = props => {
-  const [formData, setFormData] = useState({
-      originPostalCode: '',
-      receptorPostalCode: '',
-      numberPackages: 0,
-      weightInKg: 0,
-      heightInCm: 0,
-      widthInCm: 0,
-      depthInCm: 0,
-      declaredValue: 0,
-      dispatchForm: null,
-    });
+  const [errors, setErrors] = useState({}),
+    [formData, setFormData] = useState(defaultFormData),
+    [submitDisabled, setSubmitDisabled] = useState(true);
+
+  useEffect(() => {
+    if (checkIfFormIsComplete() && getAndCleanErrors()) {
+      setSubmitDisabled(false)
+      resetErrorsHandler();
+    } else {
+      setSubmitDisabled(true)
+    }
+  }, [formData])
 
   const formDataHandler = (key, value) => setFormData({
-    ...formData,
-    [key]: value
-  });
+      ...formData,
+      [key]: value
+    }),
+    errorsHandler = (key, value) => setErrors({
+      ...errors,
+      [key]: value
+    }),
+    resetErrorsHandler = () => setErrors({}),
+    nextStepHandler = e => {
+      console.log('goto')
+    };
 
-  const originPostalCodeHandler = e => e && formDataHandler('originPostalCode', e.target.value),
-    receptorPostalCodeHandler = e => e && formDataHandler('receptorPostalCode', e.target.value),
-    numberPackagesHandler = e => e && formDataHandler('numberPackages', e.target.value),
-    weightInKgHandler = e => e && formDataHandler('weightInKg', e.target.value),
-    heightInCmHandler = e => e && formDataHandler('heightInCm', e.target.value),
-    widthInCmHandler = e => e && formDataHandler('widthInCm', e.target.value),
-    depthInCmHandler = e => e && formDataHandler('depthInCm', e.target.value),
-    declaredValueHandler = e => e && formDataHandler('declaredValue', e.target.value),
+  const originPostalCodeHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('originPostalCode', !value && 'No debe ser vacio')
+      formDataHandler('originPostalCode', value)
+    },
+    receptorPostalCodeHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('receptorPostalCode', !value && 'No debe ser vacio')
+      formDataHandler('receptorPostalCode', value)
+    },
+    numberPackagesHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('numberPackages', (!value || value <= 0) && 'Debe ser mayor a 0')
+      formDataHandler('numberPackages', e.target.value)
+    },
+    weightInKgHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('weightInKg', (!value || value <= 0) && 'Debe ser mayor a 0')
+      formDataHandler('weightInKg', e.target.value)
+    },
+    heightInCmHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('heightInCm', (!value || value <= 0) && 'Debe ser mayor a 0')
+      formDataHandler('heightInCm', e.target.value)
+    },
+    widthInCmHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('widthInCm', (!value || value <= 0) && 'Debe ser mayor a 0')
+      formDataHandler('widthInCm', e.target.value)
+    },
+    depthInCmHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('depthInCm', (!value || value <= 0) && 'Debe ser mayor a 0')
+      formDataHandler('depthInCm', e.target.value)
+    },
+    declaredValueHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('declaredValue', (!value || value <= 0) && 'Debe ser mayor a 0')
+      formDataHandler('declaredValue', e.target.value)
+    },
     dispatchFormHandler = e => e && formDataHandler('dispatchForm', e.target.value);
+
+  const getAndCleanErrors = () => {
+      const lol = R.filter(f => f, errors);
+      return R.isEmpty(lol);
+    },
+    checkIfFormIsComplete = () => {
+      let allFormDataSuccess = true;
+
+      Object.entries(formData).forEach(([key, value]) => {
+        if (defaultFormData[key] === value)
+          allFormDataSuccess = false;
+      });
+
+      return allFormDataSuccess;
+    }
 
   return (
     <Component
@@ -59,6 +128,10 @@ const Container = props => {
 
       dispatchForm={formData.dispatchForm}
       dispatchFormHandler={dispatchFormHandler}
+
+      errors={errors}
+      submitDisabled={submitDisabled}
+      nextStepHandler={nextStepHandler}
     />
   );
 };
