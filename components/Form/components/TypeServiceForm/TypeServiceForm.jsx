@@ -61,8 +61,14 @@ const TypeServiceForm = props => {
         </p>
         <div className="form-group row form-group col-md-3 col-lg-2"><br/>
 
-          <input name="enviar2" type="submit" id="enviar2" title="Enviar2" defaultValue="Siguiente"
-                 className="btn btn-primary btn-md"/>
+          <input 
+          name="enviar2" 
+          type="submit" 
+          id="enviar2" 
+          title="Enviar2" 
+          defaultValue="Siguiente"
+          className="btn btn-primary btn-md"/>
+          
         </div>
 
         <a

@@ -27,54 +27,108 @@ const SenderDataForm = props => {
         <div className="form-group form-group col-md-2 col-lg-4">
           <p className="formulario">Dirección*</p>
 
-          <input type="text" placeholder="Calle" className="form-control"/><br/>
-
+          <input 
+          type="text" 
+          placeholder="Calle" c
+          lassName="form-control"
+          defaultValue={props.senderAddress}
+          onChange={props.senderAddressHandler}
+          />
+          <label className="text-danger">{props.errors.senderAddress}</label>
+          <br/>
         </div>
         <div className="form-group form-group col-md-2 col-lg-2">
           <p className="formulario">Número*</p>
 
-          <input type="text" className="form-control"/><br/>
-
+          <input 
+          type="text" 
+          className="form-control"
+          defaultValue={props.senderAddressNumber}
+          onChange={props.senderAddressNumberHandler}
+          />
+          <label className="text-danger">{props.errors.senderAddressNumber}</label>
+          <br/>
         </div>
 
         <div className="form-group form-group col-md-2 col-lg-2">
           <p className="formulario">Codigo Postal*</p>
 
-          <input type="text" className="form-control"/><br/>
-
+          <input 
+          type="text" 
+          className="form-control"
+          defaultValue={props.senderPostalCode}
+          onChange={props.senderPostalCodeHandler}
+          />
+           <label className="text-danger">{props.errors.senderPostalCode}</label>
+          <br/>
         </div>
 
         <div className="form-group form-group col-md-2 col-lg-2">
           <p className="formulario">Piso/Depto</p>
 
-          <input type="text" className="form-control"/><br/>
-
+          <input 
+          type="text" 
+          className="form-control"
+          defaultValue={props.senderDepartmentNumber}
+          onChange={props.senderDepartmentNumberHandler}
+          />
+          <label className="text-danger">{props.errors.senderDepartmentNumber}</label>
+          <br/>
         </div>
 
         <div className="form-group form-group col-md-2 col-lg-2">
           <p className="formulario">Datos adicionales</p>
 
-          <input type="text" className="form-control" size="50" maxLength="20"/>
+          <input 
+          type="text" 
+          className="form-control" 
+          size="50" 
+          maxLength="20"
+          defaultValue={props.senderAdditionalData}
+          onChange={props.senderAdditionalDataHandler}
+          />
+          <label className="text-danger">{props.errors.senderAdditionalData}</label>
           <br/>
 
         </div>
         <div className="form-group col-md-3 col-lg-4">
           <br/>
-
           <p className="formulario">DNI/CUIL/CUIT del remitente*</p>
-          <input type="text" className="form-control"/><br/>
+
+          <input 
+          type="text" 
+          className="form-control"
+          defaultValue={props.senderNationalId}
+          onChange={props.senderNationalIdHandler}
+          />
+          <label className="text-danger">{props.errors.senderNationalId}</label>
+          <br/>
         </div>
         <div className="form-group col-md-3 col-lg-4">
           <br/>
-
           <p className="formulario">Teléfono del remitente*</p>
-          <input type="text" className="form-control"/><br/>
+
+          <input 
+          type="text" 
+          className="form-control"
+          defaultValue={props.senderPhone}
+          onChange={props.senderPhoneHandler}
+          />
+          <label className="text-danger">{props.errors.senderPhone}</label>
+          <br/>
         </div>
         <div className="form-group col-md-3 col-lg-4">
           <br/>
-
           <p className="formulario">Email del remitente*</p>
-          <input type="email" className="form-control"/><br/>
+
+          <input 
+          type="email" 
+          className="form-control"
+          defaultValue={props.senderEmail}
+          onChange={props.senderEmailHandler}
+          />
+          <label className="text-danger">{props.errors.senderEmail}</label>
+          <br/>
         </div>
 
 
@@ -83,14 +137,15 @@ const SenderDataForm = props => {
 
         <div className="form-group form-group col-md-3 col-lg-12">
 
-          <input
-            name="enviar3"
-            type="button"
+          <a
             id="enviar3"
-            title="Enviar"
-            defaultValue="Siguiente"
             className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
-          />
+            href="#collapseFour1"
+            data-toggle="collapse"
+            onClick={props.nextStepHandler}
+          >
+            Siguiente
+            </a>
           <br/>
           <br/>
           <a
