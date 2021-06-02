@@ -20,7 +20,7 @@ const Container = props => {
     const [errors, setErrors] = useState({}),
       [formData, setFormData] = useState(defaultFormData),
       [submitDisabled, setSubmitDisabled] = useState(true);
-  
+
     useEffect(() =>{
       if (checkIfFormIsComplete() && getAndCleanErrors()) {
         setSubmitDisabled(false)
@@ -29,7 +29,7 @@ const Container = props => {
         setSubmitDisabled(true)
       }
     }, [formData])
-  
+
     const formDataHandler = (key, value) => setFormData({
         ...formData,
         [key]: value
@@ -39,7 +39,7 @@ const Container = props => {
         [key]: value
       }),
       resetErrorsHandler = () => setErrors({});
-  
+
     const addresseeFullNameHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
       errorsHandler('addresseeFullName', !value && 'No debe ser vacio')
@@ -93,25 +93,23 @@ const Container = props => {
         errorsHandler('addresseeEmail', !value && 'No debe ser vacio')
         formDataHandler('addresseeEmail', value);
       }
-  
-  
+
+
     const getAndCleanErrors = () => {
         const lol = R.filter(f => f, errors);
         return R.isEmpty(lol);
       },
       checkIfFormIsComplete = () => {
         let allFormDataSuccess = true;
-  
+
         Object.entries(formData).forEach(([key, value]) => {
           if (defaultFormData[key] === value)
             allFormDataSuccess = false;
         });
-  
+
         return allFormDataSuccess;
       }
-  
-    console.log('formData: s', formData)
-  
+
     return (
       <Component
         {...props}

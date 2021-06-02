@@ -36,11 +36,16 @@ const Container = props => {
     });
 
     setServices(data);
+  },
+  nextStepHandler = e => {
+    const selectedService = services.find(s => s.selected);
+    props.formDataHandler("typeService", selectedService)
   };
 
   return (
     <Component
       {...props}
+      nextStepHandler={nextStepHandler}
       services={services}
       typeServiceHandler={typeServiceHandler}
     />

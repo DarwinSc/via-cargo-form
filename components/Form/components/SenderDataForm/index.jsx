@@ -8,7 +8,7 @@ const defaultFormData = {
   senderFullName: '',
   senderAddress: '',
   senderAddressNumber: '',
-  senderPostalCode:'',
+  senderPostalCode: '',
   senderDepartmentNumber: '',
   senderAdditionalData: '',
   senderNationalId: '',
@@ -107,53 +107,45 @@ const Container = props => {
       });
 
       return allFormDataSuccess;
-    }
-
-  console.log('formData: ', formData)
+    },
+    nextStepHandler = () => props.formDataHandler('senderData', formData);
 
   return (
     <Component
       {...props}
-     
-
       submitDisabled={submitDisabled}
+
+      nextStepHandler={nextStepHandler}
+
       senderFullName={formData.senderFullName}
       senderFullNameHandler={senderFullNameHandler}
 
-      submitDisabled={submitDisabled}
       senderAddress={formData.senderAddress}
       senderAddressHandler={senderAddressHandler}
 
-      submitDisabled={submitDisabled}
       senderAddressNumber={formData.senderAddressNumber}
       senderAddressNumberHandler={senderAddressNumberHandler}
 
-      submitDisabled={submitDisabled}
       senderPostalCode={formData.senderPostalCode}
       senderPostalCodeHandler={senderPostalCodeHandler}
 
-      submitDisabled={submitDisabled}
       senderDepartmentNumber={formData.senderDepartmentNumber}
       senderDepartmentNumberHandler={senderDepartmentNumberHandler}
 
-      submitDisabled={submitDisabled}
       senderAdditionalData={formData.senderAdditionalData}
       senderAdditionalDataHandler={senderAdditionalDataHandler}
 
-      submitDisabled={submitDisabled}
       senderNationalId={formData.senderNationalId}
       senderNationalIdHandler={senderNationalIdHandler}
 
-      submitDisabled={submitDisabled}
       senderPhone={formData.senderPhone}
       senderPhoneHandler={senderPhoneHandler}
 
-      submitDisabled={submitDisabled}
       senderEmail={formData.senderEmail}
       senderEmailHandler={senderEmailHandler}
 
       errors={errors}
-     
+
     />
   );
 };

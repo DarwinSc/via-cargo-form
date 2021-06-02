@@ -3,6 +3,8 @@ import * as R from "ramda"
 
 import Component from "./BeginManagerForm";
 
+import { accordionConfig } from "../../index";
+
 const defaultFormData = {
   originPostalCode: '',
   receptorPostalCode: '',
@@ -38,10 +40,7 @@ const Container = props => {
       [key]: value
     }),
     resetErrorsHandler = () => setErrors({}),
-    nextStepHandler = e => {
-      window.localStorage.setItem('profile', JSON.stringify(formData))
-      console.log('aaaa')
-    };
+    nextStepHandler = e => props.formDataHandler("deliveryData", formData);
 
   const originPostalCodeHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
