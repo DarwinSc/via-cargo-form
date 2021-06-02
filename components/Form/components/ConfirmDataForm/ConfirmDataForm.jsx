@@ -9,7 +9,7 @@ const ConfirmDataForm = props => {
             <h3>Detalle de la operación</h3>
             <p>Por favor, revise cuidadosamente los datos ingresados</p></div>
         </div>
-
+        
         <div className="col-md-3 col-lg-5">
           <img src="/images/box.png" alt="Via Cargo Mi retiro en domicilio Online" width="100"
                className="img-fluid"/>
@@ -34,14 +34,14 @@ const ConfirmDataForm = props => {
               {props.deliveryData.heightInCm} cm
               x {props.deliveryData.widthInCm} cm
               x {props.deliveryData.depthInCm} cm</p>
-            <p>Entrega estándar</p>
+            <h4><b>Entrega estándar</b></h4>
           </div>
         </div>
         <div className="col-md-3 col-lg-12">
           <hr className="my-4"/>
           <div className="text-left">
             <p>
-              <strong>Destinatario</strong>
+              <strong>Remitente</strong>
             </p>
 
           </div>
@@ -62,17 +62,25 @@ const ConfirmDataForm = props => {
           <hr className="my-4"/>
           <div className="text-left">
             <p>
-              <strong>Remitente</strong>
+              <strong>Destinatario</strong>
             </p>
-
+ 
           </div>
         </div>
         <div className="col-md-3 col-lg-12">
           <div className="text-left">
-            <h5>Nombre y apellido del remitente</h5>
-            <p>Dirección 1234, Piso: 1 Depto: D</p>
-            <p>Argentina, C.A.B.A. / CP1024</p>
-            <p>DNI: 12.345.678 / email@gmail.com / Cel. 011-1234-5678</p>
+            <h5>{props.receiverData.addresseeFullName}</h5>
+            <p>
+              <b>Dirección:</b> {props.receiverData.addresseeDirection} {props.receiverData.addresseeNumber}  <b>Piso/Depto:</b> {props.receiverData.addresseeDepartmentNumber}
+
+            </p>
+
+            <p>
+                <b>Codigo Postal:</b> {props.receiverData.addresseePostalCode}
+            </p>
+            <p>
+              <b>DNI/CUIL:</b> {props.receiverData.addresseeNationalId} <b>Email:</b> {props.receiverData.addresseeEmail} <b>Cel</b> {props.receiverData.addresseePhone}
+              </p>
           </div>
           <hr className="my-4"/>
         </div>
@@ -144,87 +152,13 @@ const ConfirmDataForm = props => {
         </div>
 
 
-        <div
-          className="modal fade"
-          id="ventanamodal"
-          tabIndex="-1"
-          role="dialog"
-          aria-labelledby="tituloventana"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-
-              <div className="modal-header">
-
-                <img src="/images/logo-via-cargo-verde.png" alt="Placeholder image"
-                     width="150" className="img-fluid"/>
-                <hr/>
-                <h5
-                  className="card-title"
-                  id="tituloventana"
-                >
-                  <strong>Orden confirmada</strong>
-                </h5>
-
-                <button
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Cerrar"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-
-              </div>
-
-              <div className="modal-body">
-                <div className="alert alert-success">
-
-                  <p className="card-text">Su solicitud se envió correctamente.
-                    Gracias.</p>
-
-                  <img
-                    src="/images/orden-confirmada.png"
-                    alt="Placeholder image"
-                    width="200"
-                    className="img-fluid"
-                  />
-
-                  <br/>
-                  <br/>
-
-                  <p
-                    className="card-text">Estimado <strong>Nombre Cliente</strong>,</p>
-
-                  <p className="card-text">Hemos procesado su solicitud. En breve recibirá
-                    un mail con los detalles de la operación y número de
-                    seguimiento.</p>
-
-                  <p className="card-text">Gracias por confiar en <strong>Via
-                    Cargo.</strong></p>
-
-                </div>
-
-              </div>
-              <div className="modal-footer">
-
-                <button
-                  className="btn btn-primary"
-                  type="button"
-                  data-dismiss="modal"
-                >
-                  Ver
-                  resumen en pdf
-                </button>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-
       </div>
+
+
+
+
+
+
 
     </div>
   );

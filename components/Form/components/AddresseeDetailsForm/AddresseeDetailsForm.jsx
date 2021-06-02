@@ -151,9 +151,9 @@ const AddresseeDetailsForm = props => {
           <a
           id="enviar4" 
           className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
-          href="##collapseFive1"
+          href="#collapseFive1"
           data-toggle="collapse"
-          
+          onClick={props.nextStepHandler}
           >
             Siguiente
           </a>

@@ -108,11 +108,12 @@ const Container = props => {
         });
 
         return allFormDataSuccess;
-      }
-
+      },
+      nextStepHandler = () => props.formDataHandler('receiverData', formData);
     return (
       <Component
         {...props}
+        nextStepHandler={nextStepHandler}
 
         submitDisabled={submitDisabled}
         addresseeFullName={formData.addresseeFullName}
