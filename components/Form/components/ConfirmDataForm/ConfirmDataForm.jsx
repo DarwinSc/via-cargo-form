@@ -9,7 +9,7 @@ const ConfirmDataForm = props => {
             <h3>Detalle de la operación</h3>
             <p>Por favor, revise cuidadosamente los datos ingresados</p></div>
         </div>
-        
+
         <div className="col-md-3 col-lg-5">
           <img src="/images/box.png" alt="Via Cargo Mi retiro en domicilio Online" width="100"
                className="img-fluid"/>
@@ -64,7 +64,7 @@ const ConfirmDataForm = props => {
             <p>
               <strong>Destinatario</strong>
             </p>
- 
+
           </div>
         </div>
         <div className="col-md-3 col-lg-12">
@@ -122,11 +122,11 @@ const ConfirmDataForm = props => {
             name="accept"
             type="checkbox"
             id="accept"
-            checked={props.availableSubmit}
+            defaultValue={props.availableSubmit}
             onClick={props.setAvailableSubmit}
 
           />
-          <label for="accept" className="form-check-label">
+          <label htmlFor="accept" className="form-check-label">
             El contenido del envío que realizo
             está bajo mi responsabilidad.*
           </label>

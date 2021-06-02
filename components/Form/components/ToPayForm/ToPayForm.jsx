@@ -2,16 +2,16 @@ import React from 'react'
 
 const ToPayForm = props => {
     return (
-        <div class="card-body">
+        <div className="card-body">
 
-            <div class="container">
-              <div class="text-left">
+            <div className="container">
+              <div className="text-left">
                 <h3>¿Cómo quiere pagar?</h3>
               </div>
-              <div class="container-fluid">
-                <div class="row">
-                  
-                  <div class="col-md-12 mt-5 text-center bg-light alto">
+              <div className="container-fluid">
+                <div className="row">
+
+                  <div className="col-md-12 mt-5 text-center bg-light alto">
                       <h2> eframe First data </h2>
                   </div>
                 </div>
@@ -31,13 +31,13 @@ const ToPayForm = props => {
 
             </div>
 
-          
-            <div 
-                className="modal fade" 
-                id="ventanamodal" 
-                tabIndex="-1" 
+
+            <div
+                className="modal fade"
+                id="ventanamodal"
+                tabIndex="-1"
                 role="dialog"
-                aria-labelledby="tituloventana" 
+                aria-labelledby="tituloventana"
                 aria-hidden="true"
               >
                 <div className="modal-dialog" role="document">
@@ -48,16 +48,16 @@ const ToPayForm = props => {
                       <img src="/images/logo-via-cargo-verde.png" alt="Placeholder image"
                            width="150" className="img-fluid"/>
                       <hr/>
-                      <h5 
-                          className="card-title" 
+                      <h5
+                          className="card-title"
                           id="tituloventana"
                         >
                           <strong>Orden confirmada</strong>
                       </h5>
-                        
-                      <button 
-                        className="close" 
-                        data-dismiss="modal" 
+
+                      <button
+                        className="close"
+                        data-dismiss="modal"
                         aria-label="Cerrar"
                       >
                         <span aria-hidden="true">&times;</span>
@@ -71,20 +71,20 @@ const ToPayForm = props => {
                         <p className="card-text">Su solicitud se envió correctamente.
                           Gracias.</p>
 
-                        <img 
-                        src="/images/orden-confirmada.png" 
+                        <img
+                        src="/images/orden-confirmada.png"
                         alt="Placeholder image"
-                        width="200" 
+                        width="200"
                         className="img-fluid"
                         />
 
                         <br/>
                         <br/>
 
-                        <p 
+                        <p
                         className="card-text">
                             Estimado, {props.senderData.senderFullName}
-                            
+
                             </p>
 
                         <p className="card-text">Hemos procesado su solicitud. En breve recibirá
@@ -99,11 +99,11 @@ const ToPayForm = props => {
                     </div>
                     <div className="modal-footer">
 
-                      <button 
-                      className="btn btn-primary" 
-                      type="button" 
+                      <button
+                      className="btn btn-primary"
+                      type="button"
                       data-dismiss="modal"
-                      > 
+                      >
                         Ver
                         resumen en pdf
                       </button>
