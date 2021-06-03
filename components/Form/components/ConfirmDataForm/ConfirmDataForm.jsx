@@ -149,16 +149,21 @@ const ConfirmDataForm = props => {
             Confirmar
           </a>
 
+          <br/>
+          <br/>
+
+          <a
+            className={`btn btn-secondary`}
+            data-toggle="collapse"
+            href={`#${props.previousNameAction}`}
+          >
+            Volver atrás
+          </a>
+
         </div>
 
 
       </div>
-
-
-
-
-
-
 
     </div>
   );

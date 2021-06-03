@@ -44,12 +44,12 @@ const Container = props => {
 
   const originPostalCodeHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('originPostalCode', !value && 'No debe ser vacio')
+      errorsHandler('originPostalCode', !value && 'Campo obligatorio')
       formDataHandler('originPostalCode', value)
     },
     receptorPostalCodeHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('receptorPostalCode', !value && 'No debe ser vacio')
+      errorsHandler('receptorPostalCode', !value && 'Campo obligatorio')
       formDataHandler('receptorPostalCode', value)
     },
     numberPackagesHandler = e => {

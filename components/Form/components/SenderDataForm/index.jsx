@@ -42,55 +42,55 @@ const Container = props => {
 
   const senderFullNameHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderFullName', !value && 'No debe ser vacio')
+    errorsHandler('senderFullName', !value && 'Campo obligatorio')
     formDataHandler('senderFullName', value);
   }
 
   const senderAddressHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderAddress', !value && 'No debe ser vacio')
+    errorsHandler('senderAddress', !value && 'Campo obligatorio')
     formDataHandler('senderAddress', value);
   }
 
   const senderAddressNumberHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderAddressNumber', !value && 'No debe ser vacio')
+    errorsHandler('senderAddressNumber', !value && 'Campo obligatorio')
     formDataHandler('senderAddressNumber', value);
   }
 
   const senderPostalCodeHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderPostalCode', !value && 'No debe ser vacio')
+    errorsHandler('senderPostalCode', !value && 'Campo obligatorio')
     formDataHandler('senderPostalCode', value);
   }
 
   const senderDepartmentNumberHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderDepartmentNumber', !value && 'No debe ser vacio')
+    errorsHandler('senderDepartmentNumber', !value && 'Campo obligatorio')
     formDataHandler('senderDepartmentNumber', value);
   }
 
   const senderAdditionalDataHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderAdditionalData', !value && 'No debe ser vacio')
+    errorsHandler('senderAdditionalData', !value && 'Campo obligatorio')
     formDataHandler('senderAdditionalData', value);
   }
 
   const senderNationalIdHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderNationalId', !value && 'No debe ser vacio')
+    errorsHandler('senderNationalId', !value && 'Campo obligatorio')
     formDataHandler('senderNationalId', value);
   }
 
   const senderPhoneHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderPhone', !value && 'No debe ser vacio')
+    errorsHandler('senderPhone', !value && 'Campo obligatorio')
     formDataHandler('senderPhone', value);
   }
 
   const senderEmailHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderEmail', !value && 'No debe ser vacio')
+    errorsHandler('senderEmail', !value && 'Campo obligatorio')
     formDataHandler('senderEmail', value);
   }
 

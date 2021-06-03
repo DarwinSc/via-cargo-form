@@ -8,18 +8,18 @@ const servicesData = [
     id: 1,
     name: 'Basica',
     title: 'Retiro/Entrega a domicilio',
-    description: 'Servicio de entrega básica para envíos de hasta xxx kg. Con entrega en domicilio del destinatario*.',
+    description: 'Servicio de entrega básica para envíos con entrega en domicilio del destinatario*.',
     image: 'http://www.knkadvertising.com/cotizadorvc/images/basica.png',
-    price: 'Campo para integrar',
+    price: '',
     selected: true
   },
   {
     id: 2,
     name: 'Estandar',
     title: 'Retiro en domicilio / Entrega en agencia',
-    description: 'Servicio de entrega básica para envíos de hasta xxx kg. Con entrega en domicilio del destinatario*.',
+    description: 'Servicio de entrega estándar para envíos y retiro en sucursal seleccionada*.',
     image: 'http://www.knkadvertising.com/cotizadorvc/images/estandar.png',
-    price: 'Campo para Integrar',
+    price: '',
     selected: false,
   }
 ];

@@ -6,6 +6,7 @@ import Component from "./ConfirmDataForm"
 
 const ConfirmDataForm = props => {
   const [availableSubmit, setAvailableSubmit] = useState(false);
+ 
 
   return (
     <Component

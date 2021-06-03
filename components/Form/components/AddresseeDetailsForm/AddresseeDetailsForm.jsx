@@ -8,7 +8,7 @@ const AddresseeDetailsForm = props => {
           <div className="text-left"><h3>Completá los datos del destinatario</h3>
             <p>Los campos marcados con * son obligatorios</p></div>
         </div>
-
+        
         <div className="form-group col-md-3 col-lg-12">
           <br/>
 

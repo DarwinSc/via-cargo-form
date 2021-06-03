@@ -43,21 +43,11 @@ const TypeServiceForm = props => {
       <br/>
       <div>
 
-        <p>*Los valores de cotización son únicamente informativos y están sujetos a
-          variaciones
-          según cargo por manejo, peso y/o medida reales registradas en el momento de la
-          venta. El valor del servicio contraentrega tiene un costo adicional que no está
-          contemplado en esta cotización. El valor del envío puede variar en el momento de la
-          entrega en el punto de venta.</p>
+        <p>Los valores de cotización son únicamente informativos y están sujetos a variaciones según cargo por manejo, peso y/o medida reales registradas en el momento del retira.</p>
 
-        <p>**La prima de reembolso a pagar, es del 2,5% del valor declarado. En todos los
-          casos
-          el acondicionamiento del embalaje de las piezas es responsabilidad del
-          remitente.</p>
+        <p>**En todos los casos el acondicionamiento del embalaje de las piezas es responsabilidad del remitente.</p>
 
-        <p>*** Toda operación tiene un costo mínimo y fijo de $300, en concepto de flete por
-          el
-          retiro a domicilio de encomienda.
+        <p>* Toda operación tiene un costo mínimo y fijo de $ XXX (campo para integrar un WS), en concepto de flete por el retiro a domicilio de encomienda y gastos de servicio.
         </p>
         <div className="form-group row form-group col-md-3 col-lg-2"><br/>
 
