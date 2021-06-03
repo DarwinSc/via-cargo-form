@@ -96,7 +96,7 @@ const SenderDataForm = props => {
           <p className="formulario">DNI/CUIL/CUIT del remitente*</p>
 
           <input 
-          type="text" 
+          type="number" 
           className="form-control"
           defaultValue={props.senderNationalId}
           onChange={props.senderNationalIdHandler}
@@ -109,7 +109,7 @@ const SenderDataForm = props => {
           <p className="formulario">Teléfono del remitente*</p>
 
           <input 
-          type="text"
+          type="number"
           className="form-control"
           defaultValue={props.senderPhone}
           onChange={props.senderPhoneHandler}
