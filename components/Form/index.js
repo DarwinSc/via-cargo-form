@@ -4,12 +4,12 @@ import Component from "./Form";
 
 
 export const accordionConfig = {
-  BEGIN_MANAGER: true,
-  SERVICE_TYPE: true,
-  SENDER_DATA: true,
-  RECIPIENT_DETAILS: true,
-  CHECKOUT: true,
-  TO_PAY: true,
+  BEGIN_MANAGER: false,
+  SERVICE_TYPE: false,
+  SENDER_DATA: false,
+  RECIPIENT_DETAILS: false,
+  CHECKOUT: false,
+  TO_PAY: false,
 };
 
 const Container = props => {

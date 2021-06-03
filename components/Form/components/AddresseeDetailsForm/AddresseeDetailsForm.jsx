@@ -103,7 +103,7 @@ const AddresseeDetailsForm = props => {
           <p className="formulario">DNI/CUIL/CUIT del destinatario*</p>
 
           <input 
-            type="text" 
+            type="number" 
             className="form-control"
             defaultValue={props.addresseeNationalId}
             onChange={props.addresseeNationalIdHandler}
@@ -118,7 +118,7 @@ const AddresseeDetailsForm = props => {
           <p className="formulario">Teléfono del destinatario*</p>
 
           <input 
-            type="text" 
+            type="number"
             className="form-control"
             defaultValue={props.addresseePhone}
             onChange={props.addresseePhoneHandler}
@@ -166,7 +166,7 @@ const AddresseeDetailsForm = props => {
           href={`#${props.previousNameAction}`}
           
           >
-            Volver atras
+            Volver atrás
           </a>
 
         </div>

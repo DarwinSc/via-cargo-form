@@ -4,13 +4,16 @@ import * as R from "ramda";
 import Component from "./AddresseeDetailsForm";
 
 
+import { isValidEmail } from "../../../../utils"
+
+
 const defaultFormData = {
     addresseeFullName: '',
     addresseeDirection: '',
     addresseeNumber: '',
     addresseePostalCode: '',
-    addresseeDepartmentNumber: '',
-    addresseeAdditionalDara: '',
+    //addresseeDepartmentNumber: '',
+    //addresseeAdditionalDara: '',
     addresseeNationalId: '',
     addresseePhone: '',
     addresseeEmail: '',
@@ -90,7 +93,15 @@ const Container = props => {
 
       const addresseeEmailHandler = e => {
         const value = R.pathOr(null, ['target', 'value'], e);
-        errorsHandler('addresseeEmail', !value && 'Campo obligatorio')
+        console.log
+        if(!value)
+          errorsHandler('addresseeEmail', !value && 'Campo obligatorio')
+    
+        else if(!isValidEmail(value))
+          errorsHandler('addresseeEmail', 'Debe ser un email valid')
+        else if(isValidEmail(value))
+          errorsHandler('addresseeEmail', null)
+          
         formDataHandler('addresseeEmail', value);
       }
 

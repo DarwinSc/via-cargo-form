@@ -109,7 +109,7 @@ const SenderDataForm = props => {
           <p className="formulario">Teléfono del remitente*</p>
 
           <input 
-          type="text" 
+          type="text"
           className="form-control"
           defaultValue={props.senderPhone}
           onChange={props.senderPhoneHandler}
@@ -122,7 +122,7 @@ const SenderDataForm = props => {
           <p className="formulario">Email del remitente*</p>
 
           <input 
-          type="email" 
+          type="tex" 
           className="form-control"
           defaultValue={props.senderEmail}
           onChange={props.senderEmailHandler}

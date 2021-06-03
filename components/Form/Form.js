@@ -172,6 +172,7 @@ const Form = props => {
             senderData={props.formData.senderData}
             receiverData={props.formData.receiverData}
             typeService={props.formData.typeService}
+            previousNameAction="collapseFour1"
           />
         </div>
       </div>

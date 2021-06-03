@@ -4,7 +4,7 @@ import React from 'react'
 import Component from "./ConfirmDataForm"
 
 
-const ConfirmDataForm = props => {
+const Container = props => {
   const [availableSubmit, setAvailableSubmit] = useState(false);
  
 
@@ -17,5 +17,5 @@ const ConfirmDataForm = props => {
   );
 };
 
-export default ConfirmDataForm;
+export default Container;
 

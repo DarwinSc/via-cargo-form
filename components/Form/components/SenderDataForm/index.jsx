@@ -3,14 +3,15 @@ import * as R from "ramda";
 
 import Component from "./SenderDataForm";
 
+import { isValidEmail } from "../../../../utils"
 
 const defaultFormData = {
   senderFullName: '',
   senderAddress: '',
   senderAddressNumber: '',
   senderPostalCode: '',
-  senderDepartmentNumber: '',
-  senderAdditionalData: '',
+  // senderDepartmentNumber: '',
+  //senderAdditionalData: '',
   senderNationalId: '',
   senderPhone: '',
   senderEmail: '',
@@ -66,13 +67,11 @@ const Container = props => {
 
   const senderDepartmentNumberHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderDepartmentNumber', !value && 'Campo obligatorio')
     formDataHandler('senderDepartmentNumber', value);
   }
 
   const senderAdditionalDataHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderAdditionalData', !value && 'Campo obligatorio')
     formDataHandler('senderAdditionalData', value);
   }
 
@@ -90,7 +89,15 @@ const Container = props => {
 
   const senderEmailHandler = e => {
     const value = R.pathOr(null, ['target', 'value'], e);
-    errorsHandler('senderEmail', !value && 'Campo obligatorio')
+    console.log
+    if(!value)
+      errorsHandler('senderEmail', !value && 'Campo obligatorio')
+
+    else if(!isValidEmail(value))
+      errorsHandler('senderEmail', 'Debe ser un email valid')
+    else if(isValidEmail(value))
+      errorsHandler('senderEmail', null)
+      
     formDataHandler('senderEmail', value);
   }
 

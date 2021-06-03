@@ -43,11 +43,11 @@ const TypeServiceForm = props => {
       <br/>
       <div>
 
-        <p>Los valores de cotización son únicamente informativos y están sujetos a variaciones según cargo por manejo, peso y/o medida reales registradas en el momento del retira.</p>
+        <p>*Los valores de cotización son únicamente informativos y están sujetos a variaciones según cargo por manejo, peso y/o medida reales registradas en el momento del retira.</p>
 
         <p>**En todos los casos el acondicionamiento del embalaje de las piezas es responsabilidad del remitente.</p>
 
-        <p>* Toda operación tiene un costo mínimo y fijo de $ XXX (campo para integrar un WS), en concepto de flete por el retiro a domicilio de encomienda y gastos de servicio.
+        <p>* Toda operación tiene un costo mínimo y fijo de $ , en concepto de flete por el retiro a domicilio de encomienda y gastos de servicio.
         </p>
         <div className="form-group row form-group col-md-3 col-lg-2"><br/>
 
@@ -56,7 +56,7 @@ const TypeServiceForm = props => {
           className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
           href="#collapseThree1"
           data-toggle="collapse"
-          onClick={props.nextStepHandler}
+          onClick={props.nextStepHandler} 
           >
             Siguiente
           </a>
