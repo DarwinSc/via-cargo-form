@@ -142,7 +142,7 @@ export default function Home() {
        <div class={`${styles.card2}  col-md-3 offset-1`}> 
 		    <div class={`${styles.cardBody}`}>
 			  <h5 class={`${styles.cardTitle2}`}>Sujeción y agarre</h5>
-
+				<hr/>
 			 <p class={`${styles.cardText}`}>Para su mayor seguridad, es preferible que se utilicen películas plásticas adheribles (Strech), zunchos, cintas o ganchos para sellar los empaques y embalajes, y facilitar así su transporte, manipulación y almacenamiento.</p>
 
 				
