@@ -21,7 +21,13 @@ export default function Home() {
 		 <p class="lead">Coordina tus envíos en solo 3 pasos y ahorrá tiempo.
          		<br/>
          		<br/>
-            <button class="btn btn-primary"> Comenzar</button>
+				 <ul className="navbar-nav mr-auto">
+					 <li className="nav-item active">
+					 <a className="nav-link btn btn-primary" href="/cotizador">Comenzar<span className="sr-only">(current)</span></a>
+					 </li>
+					 
+				 </ul>
+            
          </p>
       </div>
   	</div>
