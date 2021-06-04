@@ -1,4 +1,4 @@
-.jumbotron {
+.jumbotron{
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   border-radius: 0.3rem;
@@ -17,4 +17,79 @@
   padding-right: 0;
   padding-left: 0;
   border-radius: 0;
+}
+
+
+.jumbotron2 {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  background-image: url('../../public/images/fondo-via-cargo.png');
+  background-repeat: no-repeat;
+  background-position: right 0%;
+  background-size: 100%;
+}
+@media (max-width: 600px) {
+.jumbotron2 {
+background-image: url('../../public/images/fondo-mobile.png');
+  padding: 4rem 2rem;
+  
+}
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+margin-top: 40px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.cardBody {
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+min-height: 1px;
+padding: 1.25rem;
+ text-align: center;
+}
+
+.cardText:last-child {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.card2 > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  text-align: center;
+  border: medium solid #FF0509;
+}
+
+
+
+.cardTitle2 {
+  margin-bottom: 0;
+  background-color: #9ec64f;
+  padding: 0;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 }
