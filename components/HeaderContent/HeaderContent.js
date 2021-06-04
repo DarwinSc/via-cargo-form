@@ -2,7 +2,7 @@ import styles from "./HeaderContent.module.css";
 
 const HeaderContent = props => {
   return (
-    <div className={`${styles.jumbotron} ${styles.jumbotronFluid} text-center col-lg-12`}>
+    <div className={`${styles.jumbotron}  ${styles.jumbotronFluid} text-center col-lg-12`}>
       <div className="col-md-12 offset-lg-2 col-lg-7 offset-xl-3">
         <h1 className="display-4">Mi retiro<br/>
           en domicilio<br/>

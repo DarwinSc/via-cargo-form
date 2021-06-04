@@ -7,8 +7,9 @@
   background-position: 65%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 600px) {
   .jumbotron {
+    background-image: url('../../public/images/fondo-mobile.png');
     padding: 4rem 2rem;
   }
 }
