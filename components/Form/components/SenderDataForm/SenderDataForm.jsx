@@ -1,6 +1,14 @@
 import React from "react";
 
 const SenderDataForm = props => {
+  let nextStepButtonProps  = {};
+
+  if(!props.submitDisabled)
+    nextStepButtonProps = {
+      "href": "#collapseFour1",
+      "data-toggle": "collapse"
+     }
+
   return (
     <div className="card-body">
       <div className="row">
@@ -138,10 +146,9 @@ const SenderDataForm = props => {
         <div className="form-group form-group col-md-3 col-lg-12">
 
           <a
+          {...nextStepButtonProps}
             id="enviar3"
-            className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
-            href="#collapseFour1"
-            data-toggle="collapse"
+            className="btn btn-primary btn-md text-white"
             onClick={props.nextStepHandler}
           >
             Siguiente

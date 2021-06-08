@@ -41,7 +41,30 @@ const Container = props => {
         ...errors,
         [key]: value
       }),
-      resetErrorsHandler = () => setErrors({});
+      resetErrorsHandler = () => setErrors({}),
+      nextStepHandler = e => {
+        if(submitDisabled) {
+          let errors = {
+  
+          }
+         
+          Object.keys(formData).map((key) => {
+            const value = formData[key];
+            if(!value) {
+              errors = {
+                ...errors,
+                [key]: 'Campo obligatorio'
+              }
+            }
+          });
+  
+          if(!R.isEmpty(errors)) {
+            setErrors({...errors});
+          }
+        } else {
+          props.formDataHandler("receiverData", formData);
+        }
+      }
 
     const addresseeFullNameHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
@@ -107,8 +130,8 @@ const Container = props => {
 
 
     const getAndCleanErrors = () => {
-        const lol = R.filter(f => f, errors);
-        return R.isEmpty(lol);
+      const filterErrors = R.filter(f => f, errors);
+      return R.isEmpty(filterErrors);
       },
       checkIfFormIsComplete = () => {
         let allFormDataSuccess = true;
@@ -119,8 +142,8 @@ const Container = props => {
         });
 
         return allFormDataSuccess;
-      },
-      nextStepHandler = () => props.formDataHandler('receiverData', formData);
+      }
+      
     return (
       <Component
         {...props}

@@ -97,7 +97,7 @@ const ToPayForm = props => {
                       </div>
 
                     </div>
-                    <div className="modal-footer">
+                    {/* <div className="modal-footer">
 
                       <button
                       className="btn btn-primary"
@@ -108,7 +108,7 @@ const ToPayForm = props => {
                         resumen en pdf
                       </button>
 
-                    </div>
+                    </div> */}
 
                   </div>
                 </div>

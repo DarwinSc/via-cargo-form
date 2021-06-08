@@ -1,6 +1,13 @@
 import React from "react";
 
 const AddresseeDetailsForm = props => {
+  let nextStepButtonProps  = {};
+
+  if(!props.submitDisabled)
+    nextStepButtonProps = {
+      "href": "#collapseFive1",
+      "data-toggle":"collapse"
+    }
     return (
       <div className="card-body">
       <div className="row">
@@ -149,10 +156,9 @@ const AddresseeDetailsForm = props => {
         <div className="form-group form-group col-md-3 col-lg-12">
 
           <a
+          {...nextStepButtonProps}
           id="enviar4" 
-          className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
-          href="#collapseFive1"
-          data-toggle="collapse"
+          className="btn btn-primary btn-md text-white"
           onClick={props.nextStepHandler}
           >
             Siguiente

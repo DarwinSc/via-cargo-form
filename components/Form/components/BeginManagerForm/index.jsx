@@ -29,7 +29,7 @@ const Container = props => {
     } else {
       setSubmitDisabled(true)
     }
-  }, [formData, errors])
+  }, [formData])
 
   const formDataHandler = (key, value) => setFormData({
       ...formData,
