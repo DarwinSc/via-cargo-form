@@ -1,6 +1,15 @@
 import React from "react";
 
 const BeginManagerForm = props => {
+  let nextStepButtonProps  = {};
+
+  if(!props.submitDisabled)
+    nextStepButtonProps = {
+      "href": "#collapseTwo1",
+      "data-toggle": "collapse"
+    }
+
+
   return (
     <div className="row">
       <div className="container">
@@ -162,9 +171,10 @@ const BeginManagerForm = props => {
         /> Pago en destino
 
       </div>
+     
       <div className="form-group form-group col-md-3 col-lg-8">
-        {props.errors.dispatchFormHandler && (
-          <label className="text-danger">{props.errors.dispatchFormHandler}</label>
+        {props.errors.dispatchForm && (
+          <label className="text-danger">{props.errors.dispatchForm}</label>
         )}
       </div>
       <br/>
@@ -173,17 +183,15 @@ const BeginManagerForm = props => {
       <div className="form-group form-group col-md-3 col-lg-12"><br/>
 
         <a
+          {...nextStepButtonProps}
           id="beginManagerSubmitButton"
-          className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
-          href="#collapseTwo1"
-          data-toggle="collapse"
+          className="btn btn-primary btn-md text-white"
           onClick={props.nextStepHandler}
-
         >
           Siguiente
         </a>
       </div>
-      
+
     </div>
   );
 };

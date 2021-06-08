@@ -29,7 +29,7 @@ const Container = props => {
     } else {
       setSubmitDisabled(true)
     }
-  }, [formData])
+  }, [formData, errors])
 
   const formDataHandler = (key, value) => setFormData({
       ...formData,
@@ -40,7 +40,29 @@ const Container = props => {
       [key]: value
     }),
     resetErrorsHandler = () => setErrors({}),
-    nextStepHandler = e => props.formDataHandler("deliveryData", formData);
+    nextStepHandler = e => {
+      if(submitDisabled) {
+        let errors = {
+
+        }
+       
+        Object.keys(formData).map((key) => {
+          const value = formData[key];
+          if(!value) {
+            errors = {
+              ...errors,
+              [key]: 'Campo obligatorio'
+            }
+          }
+        });
+
+        if(!R.isEmpty(errors)) {
+          setErrors({...errors});
+        }
+      } else {
+        props.formDataHandler("deliveryData", formData);
+      }
+    }
 
   const originPostalCodeHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
@@ -82,11 +104,15 @@ const Container = props => {
       errorsHandler('declaredValue', (!value || value <= 0) && 'Campo obligatorio')
       formDataHandler('declaredValue', e.target.value)
     },
-    dispatchFormHandler = e => e && formDataHandler('dispatchForm', e.target.value);
+    dispatchFormHandler = e => {
+      const value = R.pathOr(null, ['target', 'value'], e);
+      errorsHandler('dispatchForm', !value && 'Campo obligatorio')
+      formDataHandler('dispatchForm', e.target.value);
+    };
 
   const getAndCleanErrors = () => {
-      const lol = R.filter(f => f, errors);
-      return R.isEmpty(lol);
+      const filterErrors = R.filter(f => f, errors);
+      return R.isEmpty(filterErrors);
     },
     checkIfFormIsComplete = () => {
       let allFormDataSuccess = true;
