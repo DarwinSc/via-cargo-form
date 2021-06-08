@@ -172,7 +172,6 @@ const BeginManagerForm = props => {
       
       <div className="form-group form-group col-md-3 col-lg-12"><br/>
 
-
         <a
           id="beginManagerSubmitButton"
           className={`btn btn-primary btn-md ${props.submitDisabled && 'disabled'}`}
@@ -184,8 +183,7 @@ const BeginManagerForm = props => {
           Siguiente
         </a>
       </div>
-
-
+      
     </div>
   );
 };

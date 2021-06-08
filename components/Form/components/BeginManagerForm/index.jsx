@@ -8,12 +8,12 @@ import { accordionConfig } from "../../index";
 const defaultFormData = {
   originPostalCode: '',
   receptorPostalCode: '',
-  numberPackages: 0,
-  weightInKg: 0,
-  heightInCm: 0,
-  widthInCm: 0,
-  depthInCm: 0,
-  declaredValue: 0,
+  numberPackages: '',
+  weightInKg: '',
+  heightInCm: '',
+  widthInCm: '',
+  depthInCm: '',
+  declaredValue: '',
   dispatchForm: null,
 };
 
@@ -54,32 +54,32 @@ const Container = props => {
     },
     numberPackagesHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('numberPackages', (!value || value <= 0) && 'Debe ser mayor a 0')
+      errorsHandler('numberPackages', (!value || value <= 0) && 'Campo obligatorio')
       formDataHandler('numberPackages', e.target.value)
     },
     weightInKgHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('weightInKg', (!value || value <= 0) && 'Debe ser mayor a 0')
+      errorsHandler('weightInKg', (!value || value <= 0) && 'Campo obligatorio')
       formDataHandler('weightInKg', e.target.value)
     },
     heightInCmHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('heightInCm', (!value || value <= 0) && 'Debe ser mayor a 0')
+      errorsHandler('heightInCm', (!value || value <= 0) && 'Campo obligatorio')
       formDataHandler('heightInCm', e.target.value)
     },
     widthInCmHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('widthInCm', (!value || value <= 0) && 'Debe ser mayor a 0')
+      errorsHandler('widthInCm', (!value || value <= 0) && 'Campo obligatorio')
       formDataHandler('widthInCm', e.target.value)
     },
     depthInCmHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('depthInCm', (!value || value <= 0) && 'Debe ser mayor a 0')
+      errorsHandler('depthInCm', (!value || value <= 0) && 'Campo obligatorio')
       formDataHandler('depthInCm', e.target.value)
     },
     declaredValueHandler = e => {
       const value = R.pathOr(null, ['target', 'value'], e);
-      errorsHandler('declaredValue', (!value || value <= 0) && 'Debe ser mayor a 0')
+      errorsHandler('declaredValue', (!value || value <= 0) && 'Campo obligatorio')
       formDataHandler('declaredValue', e.target.value)
     },
     dispatchFormHandler = e => e && formDataHandler('dispatchForm', e.target.value);
